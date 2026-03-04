@@ -6,8 +6,8 @@ class AnimeUnity extends models_1.AnimeParser {
     constructor() {
         super(...arguments);
         this.name = 'AnimeUnity';
-        this.baseUrl = 'https://www.animeunity.to';
-        this.logo = 'https://www.animeunity.to/favicon-32x32.png';
+        this.baseUrl = 'https://www.animeunity.so';
+        this.logo = 'https://www.animeunity.so/favicon-32x32.png';
         this.classPath = 'ANIME.AnimeUnity';
         /**
          * @param query Search query
