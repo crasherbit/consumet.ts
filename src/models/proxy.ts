@@ -76,6 +76,14 @@ export class Proxy {
 
   private toMap = <T>(arr: T[]): [number, T][] => arr.map((v, i) => [i, v]);
 
+  /**
+   * Returns the underlying axios client instance.
+   * Useful for installing external interceptors (e.g. FlareSolverr).
+   */
+  getClient(): AxiosInstance {
+    return this.client;
+  }
+
   protected client: AxiosInstance;
 }
 

@@ -77,6 +77,13 @@ class Proxy {
     setAxiosAdapter(adapter) {
         this.client.defaults.adapter = adapter;
     }
+    /**
+     * Returns the underlying axios client instance.
+     * Useful for installing external interceptors (e.g. FlareSolverr).
+     */
+    getClient() {
+        return this.client;
+    }
 }
 exports.Proxy = Proxy;
 exports.default = Proxy;

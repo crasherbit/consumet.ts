@@ -20,6 +20,11 @@ export declare class Proxy {
     setAxiosAdapter(adapter: AxiosAdapter): void;
     private rotateProxy;
     private toMap;
+    /**
+     * Returns the underlying axios client instance.
+     * Useful for installing external interceptors (e.g. FlareSolverr).
+     */
+    getClient(): AxiosInstance;
     protected client: AxiosInstance;
 }
 export default Proxy;

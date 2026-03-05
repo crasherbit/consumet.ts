@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.safeUnpack = exports.compareTwoStrings = exports.substringBefore = exports.substringAfter = exports.convertDuration = exports.isJson = exports.getDays = exports.anilistCharacterQuery = exports.anilistStaffInfoQuery = exports.anilistSiteStatisticsQuery = exports.anilistAdvancedQuery = exports.anilistGenresQuery = exports.anilistAiringScheduleQuery = exports.anilistPopularQuery = exports.anilistTrendingQuery = exports.range = exports.kitsuSearchQuery = exports.anilistMediaDetailQuery = exports.anilistSearchQuery = exports.capitalizeFirstLetter = exports.genElement = exports.parsePostInfo = exports.formatTitle = exports.floorID = exports.splitAuthor = exports.days = exports.USER_AGENT = void 0;
+exports.installFlareSolverr = exports.safeUnpack = exports.compareTwoStrings = exports.substringBefore = exports.substringAfter = exports.convertDuration = exports.isJson = exports.getDays = exports.anilistCharacterQuery = exports.anilistStaffInfoQuery = exports.anilistSiteStatisticsQuery = exports.anilistAdvancedQuery = exports.anilistGenresQuery = exports.anilistAiringScheduleQuery = exports.anilistPopularQuery = exports.anilistTrendingQuery = exports.range = exports.kitsuSearchQuery = exports.anilistMediaDetailQuery = exports.anilistSearchQuery = exports.capitalizeFirstLetter = exports.genElement = exports.parsePostInfo = exports.formatTitle = exports.floorID = exports.splitAuthor = exports.days = exports.USER_AGENT = void 0;
 const utils_1 = require("./utils");
 Object.defineProperty(exports, "USER_AGENT", { enumerable: true, get: function () { return utils_1.USER_AGENT; } });
 Object.defineProperty(exports, "splitAuthor", { enumerable: true, get: function () { return utils_1.splitAuthor; } });
@@ -30,4 +30,6 @@ Object.defineProperty(exports, "anilistAdvancedQuery", { enumerable: true, get: 
 Object.defineProperty(exports, "anilistSiteStatisticsQuery", { enumerable: true, get: function () { return queries_1.anilistSiteStatisticsQuery; } });
 Object.defineProperty(exports, "anilistCharacterQuery", { enumerable: true, get: function () { return queries_1.anilistCharacterQuery; } });
 Object.defineProperty(exports, "anilistStaffInfoQuery", { enumerable: true, get: function () { return queries_1.anilistStaffInfoQuery; } });
+const flaresolverr_1 = require("./flaresolverr");
+Object.defineProperty(exports, "installFlareSolverr", { enumerable: true, get: function () { return flaresolverr_1.installFlareSolverr; } });
 //# sourceMappingURL=index.js.map
