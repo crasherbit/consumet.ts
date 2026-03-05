@@ -5,6 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Proxy = void 0;
 const axios_1 = __importDefault(require("axios"));
+const http_proxy_agent_1 = require("http-proxy-agent");
+const https_proxy_agent_1 = require("https-proxy-agent");
 class Proxy {
     /**
      *
@@ -79,10 +81,18 @@ class Proxy {
     }
     /**
      * Returns the underlying axios client instance.
-     * Useful for installing external interceptors (e.g. FlareSolverr).
      */
     getClient() {
         return this.client;
+    }
+    /**
+     * Route all requests through an HTTP/HTTPS proxy.
+     * @param proxyUrl The proxy URL, e.g. "http://host:port"
+     */
+    setHttpProxy(proxyUrl) {
+        this.client.defaults.httpAgent = new http_proxy_agent_1.HttpProxyAgent(proxyUrl);
+        this.client.defaults.httpsAgent = new https_proxy_agent_1.HttpsProxyAgent(proxyUrl);
+        this.client.defaults.proxy = false; // let the agents handle proxying
     }
 }
 exports.Proxy = Proxy;

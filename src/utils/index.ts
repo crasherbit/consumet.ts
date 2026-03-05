@@ -30,8 +30,6 @@ import {
   anilistStaffInfoQuery,
 } from './queries';
 
-import { installFlareSolverr, FlareSolverrConfig } from './flaresolverr';
-
 export {
   USER_AGENT,
   days,
@@ -60,6 +58,4 @@ export {
   substringBefore,
   compareTwoStrings,
   safeUnpack,
-  installFlareSolverr,
-  FlareSolverrConfig,
 };

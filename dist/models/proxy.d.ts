@@ -22,9 +22,13 @@ export declare class Proxy {
     private toMap;
     /**
      * Returns the underlying axios client instance.
-     * Useful for installing external interceptors (e.g. FlareSolverr).
      */
     getClient(): AxiosInstance;
+    /**
+     * Route all requests through an HTTP/HTTPS proxy.
+     * @param proxyUrl The proxy URL, e.g. "http://host:port"
+     */
+    setHttpProxy(proxyUrl: string): void;
     protected client: AxiosInstance;
 }
 export default Proxy;

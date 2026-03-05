@@ -1,4 +1,6 @@
 import axios, { AxiosAdapter, AxiosInstance } from 'axios';
+import { HttpProxyAgent } from 'http-proxy-agent';
+import { HttpsProxyAgent } from 'https-proxy-agent';
 
 import { ProxyConfig } from './types';
 
@@ -78,10 +80,19 @@ export class Proxy {
 
   /**
    * Returns the underlying axios client instance.
-   * Useful for installing external interceptors (e.g. FlareSolverr).
    */
   getClient(): AxiosInstance {
     return this.client;
+  }
+
+  /**
+   * Route all requests through an HTTP/HTTPS proxy.
+   * @param proxyUrl The proxy URL, e.g. "http://host:port"
+   */
+  setHttpProxy(proxyUrl: string): void {
+    this.client.defaults.httpAgent = new HttpProxyAgent(proxyUrl);
+    this.client.defaults.httpsAgent = new HttpsProxyAgent(proxyUrl);
+    this.client.defaults.proxy = false; // let the agents handle proxying
   }
 
   protected client: AxiosInstance;

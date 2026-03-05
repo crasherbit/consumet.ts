@@ -58,6 +58,8 @@
   "dependencies": {
     "ascii-url-encoder": "^1.2.0",
     "axios": "^1.7.9",
+    "http-proxy-agent": "^7.0.2",
+    "https-proxy-agent": "^7.0.6",
     "cheerio": "^1.0.0-rc.12",
     "crypto-js": "^4.1.1",
     "domhandler": "^5.0.3",
